@@ -1,5 +1,18 @@
 <?php
 
+$menu = [
+    [
+        "id" => 1,
+        "text" => "Home",
+        "url" => "index.php"
+    ],
+    [
+        "id" => 2,
+        "text" => "Chi Siamo",
+        "url" => "chi-siamo.php"
+    ],
+];
+
 $disks = [
     [
         "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
