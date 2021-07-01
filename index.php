@@ -12,9 +12,10 @@
                 padding: 0;
             }
             body {
-                padding: 20px;
-                height: 500px;
+                padding: 40px 0;
+                height: 100%;
                 display: flex;
+                background-color: #21606e;
             }
             .container-disks {
                 display: flex;
@@ -23,6 +24,7 @@
                 align-content: space-between;  
                 width: 80%;
                 margin: 0 auto;
+                height: 100%;
             }
             .disk {
                 display: flex;
@@ -30,24 +32,27 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 18%;
-                height: 48%;
+                height: 250px;
                 padding: 15px;
+                margin: 15px 0;
                 border: 1px solid black;
+                background-color: black;
+                color: white;
             }
         </style>
     </head>
     <body>
     <div class="container-disks">
         <?php
-        include __DIR__ . '/partials/database.php';
+        include __DIR__ . '/db/database.php';
 
         foreach ($disks as $disk) { ?>
             <div class="disk">
-                <h2><?php echo $disk[title]; ?></h2>
-                <h3><?php echo $disk[author]; ?></h3>
-                <h4><?php echo $disk[year]; ?></h4>
-                <h5><?php echo $disk[genre]; ?></h5>
                 <img src="<?php echo $disk[poster] ?>" width="50px" height="50px" alt="">
+                <h2><?= $disk[title]; ?></h2>
+                <h3><?= $disk[author]; ?></h3>
+                <h4><?= $disk[year]; ?></h4>
+                <h5><?= $disk[genre]; ?></h5>
             </div>
         <?php } ?>
         </div>
